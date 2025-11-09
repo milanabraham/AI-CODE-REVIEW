@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: ai-code-reviewer
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/ai_code_review
+    username: root
+    password: ROOT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+github:
+  webhook:
+    secret: testsecret123
+  token: ${GITHUB_TOKEN}
+
+groq:
+  api:
+    key: ${GROQ_KEY}
+
+server:
+  port: 8080
